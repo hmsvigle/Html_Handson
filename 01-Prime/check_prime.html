@@ -1,0 +1,35 @@
+<html><body>    
+  <form action="PayslipServlet" method="get">
+      Provide a Number Input: <input type="number" name="ip" id="ip"><br/><br>
+
+      Output: <span id="result"></span>
+          <br><br>
+      <input type="button" value="Start" onClick="check_prime()">
+      <input type="button" value="Stop" onClick="check_prime()">
+        </form>
+
+        <script>
+          var w;
+          function check_prime() {
+            // document.getElementById("result").innerHTML = document.getElementById('ip').value;
+            
+            var n = document.getElementById('ip').value;
+            var i,flag = true,m=n;
+            
+            // check for prime
+            for(i = 2; i <= m - 1; i++) 
+                if (m % i == 0) {
+                    // postMessage(m++);
+                    flag = false; 
+                    break; 
+                }
+            if (flag == true)
+               document.getElementById("result").innerHTML = m + " is prime"
+            else  
+               document.getElementById("result").innerHTML = n + " is not prime"
+          }
+          
+        </script>
+        
+    </body>
+ </html>
